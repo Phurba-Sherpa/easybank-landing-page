@@ -1,15 +1,15 @@
 :root {
 
     /* Primary */
-    --clr-blue-dark: hsl(233, 26%, 24%)
-    --clr-lime-green: hsl(136, 65%, 51%)
-    --clr-cyan-bright: hsl(192, 70%, 51%)
+    --clr-blue-dark: hsl(233, 26%, 24%);
+    --clr-lime-green: hsl(136, 65%, 51%);
+    --clr-cyan-bright: hsl(192, 70%, 51%);
 
     /* Neutral */
-    --clr-grayish-blue: hsl(233, 8%, 62%)
-    --clr-grayish-blue-light: hsl(220, 16%, 96%)
-    --clr-gray-light: hsl(0, 0%, 98%)
-    --clr-white: hsl(0, 0%, 100%)
+    --clr-grayish-blue: hsl(233, 8%, 62%);
+    --clr-grayish-blue-light: hsl(220, 16%, 96%);
+    --clr-gray-light: hsl(0, 0%, 98%);
+    --clr-white: hsl(0, 0%, 100%);
 }
 
 *, 
@@ -28,4 +28,200 @@ body {
     font-family: "Public Sans", sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.heading--primary,
+.heading--secondary, 
+.heading--tertiary {
+    font-weight: 300;
+}
+
+.heading--primary {
+    font-size: 4.8rem;
+}
+
+.heading--secondary {
+    font-size: 4rem;
+}
+
+.heading--tertiary {
+    font-size: 3.3rem;
+}
+
+.btn:link,
+.btn:visited {
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--clr-lime-green), var(--clr-cyan-bright));
+    text-decoration: none;
+    padding: 1.25rem 3rem;
+    color: var(--clr-white);
+    border-radius: 100px;
+}
+
+.btn:hover {
+
+}
+/* ==================
+    UTILITY 
+================== */
+.u-text-center {
+    text-align: center;
+}
+.u-mb-md {
+    margin-bottom: 3rem;
+}
+/* ==================
+    SECTION HERO
+================== */
+
+
+/* ==================
+    SECTION FEATURES
+================== */
+.feature {
+    background-color: var(--clr-gray-light);
+    padding: 9.6rem 0;
+    text-align: center;
+}
+.feature__intro {
+    margin-bottom: 5rem;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.feature__intro-desc {
+    color: var(--clr-grayish-blue);
+}
+
+.feature__img {
+    display: inline-block;
+}
+
+.feature__title,
+.feature__img {
+    margin-bottom: 2rem;
+}
+
+.feature__desc {
+    color: var(--clr-grayish-blue);
+}
+
+.feature-box:not(:last-child) .feature__desc {
+    margin-bottom: 4rem;
+}
+
+
+/* ===================
+    SECTION ARTICLES
+===================== */
+.articles {
+    padding: 9.6rem 0;
+    background-color: var(--clr-gray-light);
+}
+
+.article {
+    background-color: var(--clr-white);
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.article:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.article__img {
+    margin-bottom: 3rem;
+}
+
+.article__content {
+    padding: 2rem;
+    padding-top: 0;
+}
+.article__author,
+.article__desc {
+    color: var(--clr-grayish-blue);
+}
+
+.article__author {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.article__title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+.article__desc {}
+
+/* ==================
+    SECTION FOOTER
+================== */
+.footer {
+    background-color: var(--clr-blue-dark);
+    color: var(--clr-white);
+    padding: 4rem 0;
+    a:link,
+    a:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        font: inherit;
+    }
+}
+
+.footer__nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.footer__logo {}
+
+.footer__social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__nav-1 {
+    display: flex;
+    flex-direction: column;
+}
+.footer__nav-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__cta {
+    margin-inline: auto;
+}
+/* ==================
+    MAIN GRID
+================== */
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(3rem, 1fr) repeat(4, minmax(10rem, 28.5rem)) minmax(3rem, 1fr);
+}
+
+.main-grid > * {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+}
+
+.main-grid > * > * {
+    grid-column: 2/-2;
 }
