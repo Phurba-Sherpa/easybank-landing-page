@@ -61,10 +61,11 @@ img {
     padding: 1.25rem 3rem;
     color: var(--clr-white);
     border-radius: 100px;
+    display: inline-block;
 }
 
 .btn:hover {
-
+    opacity: .8;
 }
 /* ==================
     UTILITY 
@@ -167,26 +168,36 @@ img {
     background-color: var(--clr-blue-dark);
     color: var(--clr-white);
     padding: 4rem 0;
-    a:link,
-    a:visited {
-        display: inline-block;
-        text-decoration: none;
-        color: inherit;
-        font: inherit;
-    }
+}
+
+.footer__nav-container,
+.footer__logo-box ,
+.footer__nav-1,
+.footer__nav-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer__nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    margin-bottom: 3rem;
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+        font: inherit;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
 
+    a:hover,
+    a:active {
+        color: var(--clr-lime-green);
+    }
+}
 .footer__logo-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
+    gap: 3rem;
+    margin-bottom: 3rem;
 }
 
 .footer__logo {}
@@ -197,16 +208,19 @@ img {
 }
 
 .footer__nav-1 {
-    display: flex;
-    flex-direction: column;
+   
 }
 .footer__nav-2 {
-    display: flex;
-    flex-direction: column;
 }
 
 .footer__cta {
-    margin-inline: auto;
+    text-align: center;
+}
+
+.copyright {
+    margin-top: 3rem;
+    color: var(--clr-grayish-blue);
+
 }
 /* ==================
     MAIN GRID
