@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <img src="./images/logo.svg" alt="easybank logo" />
     <nav class="header__nav">
       <ul class="header__nav-list">
@@ -37,10 +37,20 @@
         <li class="header__nav-item">
           <a href="#" class="header__nav-link">Careers</a>
         </li>
-      </ul>
+      </ul> 
     </nav>
-    <a href="#" class="btn">Request Invite</a>
+    <a href="#" class="btn header__cta">Request Invite</a>
+
+    <button class="mob-btn btn-hamburger" onclick="handleBtnClick()">
+      <img src="./images/icon-hamburger.svg" alt="hamburger" />
+    </button>
+    <button class="mob-btn btn-x" onclick="handleBtnClick()">
+      <img src="./images/icon-close.svg" alt="hamburger" />
+    </button>
+
+
   </header>
+  
   <main class="main-grid">
     <section class="hero">
       <picture class="hero__img">
@@ -219,6 +229,10 @@
       
     </footer>
   </main>
+
+  <script>
+    const handleBtnClick = () => document.getElementById('header').classList.toggle('nav-open')
+  </script>
 </body>
 
 </html>
